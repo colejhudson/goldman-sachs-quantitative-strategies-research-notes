@@ -10,4 +10,5 @@ for file in *.pdf; do
   encoded=$(ruby -e 'puts URI.encode ARGV[0]' "$file")
   link="https://github.com/$username/$repo/raw/master/$encoded"
   echo "![$description]($link)" >> README.md
+  echo "" >> README.md
 done
